@@ -73,7 +73,8 @@ jobs:
           python-version: 3.9
 
       - name: deploy into heroku
-        uses: cabicho/heroku-deploy@v3.12.12 # verificando o efeito se trocar o users akhileshns/heroku-deploy@v3.12.12
+        #Error: Unable to resolve action `cabicho/heroku-deploy@v3.12.12`, repository not found
+        uses: akhileshns/heroku-deploy@v3.12.12 # verificando o efeito se trocar o users akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
